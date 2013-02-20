@@ -44,7 +44,8 @@
         player.position = ccp(player.contentSize.width/2, winSize.height/2);
         [self addChild:player];
         [self schedule:@selector(gameLogic:) interval:1.0]; //spawn monsters every 1 second
-        [self setIsTouchEnabled:YES];
+        [self setTouchEnabled:YES];
+        
         _monsters = [[NSMutableArray alloc] init];
         _projectiles = [[NSMutableArray alloc] init];
     }
@@ -54,6 +55,9 @@
 - (void) addMonster {
     
     CCSprite * monster = [CCSprite spriteWithFile:@"monster.png"];
+    
+    monster.tag = 1;
+    [_monsters addObject:monster];
     
     // Determine where to spawn the monster along the Y axis
     CGSize winSize = [CCDirector sharedDirector].winSize;
@@ -78,6 +82,8 @@
                                                 position:ccp(-monster.contentSize.width/2, actualY)];
     CCCallBlockN * actionMoveDone = [CCCallBlockN actionWithBlock:^(CCNode *node) {
         [node removeFromParentAndCleanup:YES];
+        // CCCallBlockN in addMonster
+        [_monsters removeObject:node];
     }];
     [monster runAction:[CCSequence actions:actionMove, actionMoveDone, nil]];
     
@@ -96,6 +102,9 @@
     CGSize winSize = [[CCDirector sharedDirector] winSize];
     CCSprite *projectile = [CCSprite spriteWithFile:@"projectile.png"];
     projectile.position = ccp(20, winSize.height/2);
+    
+    projectile.tag = 2;
+    [_projectiles addObject:projectile];
     
     // Determine offset of location to projectile
     CGPoint offset = ccpSub(location, projectile.position);
@@ -124,6 +133,8 @@
       [CCMoveTo actionWithDuration:realMoveDuration position:realDest],
       [CCCallBlockN actionWithBlock:^(CCNode *node) {
          [node removeFromParentAndCleanup:YES];
+         // CCCallBlockN in ccTouchesEnded
+         [_projectiles removeObject:node];
      }],
       nil]];
     
@@ -136,8 +147,7 @@
 	// in this particular example nothing needs to be released.
 	// cocos2d will automatically release all the children (Label)
 	
-	// don't forget to call "super dealloc"
-	[super dealloc];
+	
 }
 
 #pragma mark GameKit delegate
