@@ -11,7 +11,8 @@
 
 // When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
-
+NSMutableArray * _monsters;
+NSMutableArray * _projectiles;
 // HelloWorldLayer
 
 @interface HelloWorldLayer : CCLayerColor
