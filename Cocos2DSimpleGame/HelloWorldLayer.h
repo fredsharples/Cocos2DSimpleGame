@@ -13,6 +13,7 @@
 #import "cocos2d.h"
 NSMutableArray * _monsters;
 NSMutableArray * _projectiles;
+int _monstersDestroyed;
 // HelloWorldLayer
 
 @interface HelloWorldLayer : CCLayerColor

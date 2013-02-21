@@ -147,6 +147,7 @@
 		B617CC3016D4990C00E531A2 /* projectile.png in Resources */ = {isa = PBXBuildFile; fileRef = B617CC2716D4990C00E531A2 /* projectile.png */; };
 		B617CC3116D4990C00E531A2 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = B617CC2916D4990C00E531A2 /* background-music-aac.caf */; };
 		B617CC3216D4990C00E531A2 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = B617CC2A16D4990C00E531A2 /* pew-pew-lei.caf */; };
+		B617CC3516D4A81800E531A2 /* GameOverLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B617CC3416D4A81700E531A2 /* GameOverLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -436,6 +437,8 @@
 		B617CC2716D4990C00E531A2 /* projectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = projectile.png; sourceTree = "<group>"; };
 		B617CC2916D4990C00E531A2 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
 		B617CC2A16D4990C00E531A2 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		B617CC3316D4A81700E531A2 /* GameOverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverLayer.h; path = ../GameOverLayer.h; sourceTree = "<group>"; };
+		B617CC3416D4A81700E531A2 /* GameOverLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameOverLayer.m; path = ../GameOverLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -500,6 +503,8 @@
 				B617CC1616D497E800E531A2 /* HelloWorldLayer.m */,
 				B617CC1816D497E800E531A2 /* IntroLayer.h */,
 				B617CC1916D497E800E531A2 /* IntroLayer.m */,
+				B617CC3316D4A81700E531A2 /* GameOverLayer.h */,
+				B617CC3416D4A81700E531A2 /* GameOverLayer.m */,
 				B617CA8516D497E500E531A2 /* Resources */,
 				B617CA9D16D497E500E531A2 /* libs */,
 				B617CC0E16D497E800E531A2 /* Supporting Files */,
@@ -1110,6 +1115,7 @@
 				B617CC1416D497E800E531A2 /* AppDelegate.m in Sources */,
 				B617CC1716D497E800E531A2 /* HelloWorldLayer.m in Sources */,
 				B617CC1A16D497E800E531A2 /* IntroLayer.m in Sources */,
+				B617CC3516D4A81800E531A2 /* GameOverLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

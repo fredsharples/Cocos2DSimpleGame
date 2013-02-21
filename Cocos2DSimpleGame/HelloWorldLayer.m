@@ -9,6 +9,8 @@
 
 // Import the interfaces
 #import "HelloWorldLayer.h"
+#import "SimpleAudioEngine.h"
+#import "GameOverLayer.h"
 
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
@@ -44,10 +46,12 @@
         player.position = ccp(player.contentSize.width/2, winSize.height/2);
         [self addChild:player];
         [self schedule:@selector(gameLogic:) interval:1.0]; //spawn monsters every 1 second
+        [self schedule:@selector(update:)];
         [self setTouchEnabled:YES];
         
         _monsters = [[NSMutableArray alloc] init];
         _projectiles = [[NSMutableArray alloc] init];
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"background-music-aac.caf"];
     }
     return self;
 }
@@ -82,7 +86,8 @@
                                                 position:ccp(-monster.contentSize.width/2, actualY)];
     CCCallBlockN * actionMoveDone = [CCCallBlockN actionWithBlock:^(CCNode *node) {
         [node removeFromParentAndCleanup:YES];
-        // CCCallBlockN in addMonster
+        CCScene *gameOverScene = [GameOverLayer sceneWithWon:NO];
+        [[CCDirector sharedDirector] replaceScene:gameOverScene];
         [_monsters removeObject:node];
     }];
     [monster runAction:[CCSequence actions:actionMove, actionMoveDone, nil]];
@@ -133,10 +138,10 @@
       [CCMoveTo actionWithDuration:realMoveDuration position:realDest],
       [CCCallBlockN actionWithBlock:^(CCNode *node) {
          [node removeFromParentAndCleanup:YES];
-         // CCCallBlockN in ccTouchesEnded
          [_projectiles removeObject:node];
      }],
       nil]];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"pew-pew-lei.caf"];
     
 }
 
@@ -156,19 +161,22 @@
         for (CCSprite *monster in monstersToDelete) {
             [_monsters removeObject:monster];
             [self removeChild:monster cleanup:YES];
+            _monstersDestroyed++;
+            if (_monstersDestroyed > 30) {
+                CCScene *gameOverScene = [GameOverLayer sceneWithWon:YES];
+                [[CCDirector sharedDirector] replaceScene:gameOverScene];
+            }
         }
         
         if (monstersToDelete.count > 0) {
             [projectilesToDelete addObject:projectile];
         }
-        //[monstersToDelete release];
     }
     
     for (CCSprite *projectile in projectilesToDelete) {
         [_projectiles removeObject:projectile];
         [self removeChild:projectile cleanup:YES];
     }
-    //[projectilesToDelete release];
 }
 
 // on "dealloc" you need to release all your retained objects
