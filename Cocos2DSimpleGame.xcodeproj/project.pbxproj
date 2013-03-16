@@ -148,6 +148,10 @@
 		B617CC3116D4990C00E531A2 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = B617CC2916D4990C00E531A2 /* background-music-aac.caf */; };
 		B617CC3216D4990C00E531A2 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = B617CC2A16D4990C00E531A2 /* pew-pew-lei.caf */; };
 		B617CC3516D4A81800E531A2 /* GameOverLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B617CC3416D4A81700E531A2 /* GameOverLayer.m */; };
+		B67E74C016F53DCF008B9CCB /* player2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = B67E74BC16F53DCF008B9CCB /* player2-hd.png */; };
+		B67E74C116F53DCF008B9CCB /* player2.png in Resources */ = {isa = PBXBuildFile; fileRef = B67E74BD16F53DCF008B9CCB /* player2.png */; };
+		B67E74C216F53DCF008B9CCB /* projectile2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = B67E74BE16F53DCF008B9CCB /* projectile2-hd.png */; };
+		B67E74C316F53DCF008B9CCB /* projectile2.png in Resources */ = {isa = PBXBuildFile; fileRef = B67E74BF16F53DCF008B9CCB /* projectile2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -439,6 +443,10 @@
 		B617CC2A16D4990C00E531A2 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
 		B617CC3316D4A81700E531A2 /* GameOverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverLayer.h; path = ../GameOverLayer.h; sourceTree = "<group>"; };
 		B617CC3416D4A81700E531A2 /* GameOverLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameOverLayer.m; path = ../GameOverLayer.m; sourceTree = "<group>"; };
+		B67E74BC16F53DCF008B9CCB /* player2-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player2-hd.png"; sourceTree = "<group>"; };
+		B67E74BD16F53DCF008B9CCB /* player2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player2.png; sourceTree = "<group>"; };
+		B67E74BE16F53DCF008B9CCB /* projectile2-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "projectile2-hd.png"; sourceTree = "<group>"; };
+		B67E74BF16F53DCF008B9CCB /* projectile2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = projectile2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -515,6 +523,7 @@
 		B617CA8516D497E500E531A2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B67E74BB16F53DCF008B9CCB /* ResourcePack2 */,
 				B617CC2016D4990C00E531A2 /* ResourcePack */,
 				B617CA8616D497E500E531A2 /* Default.png */,
 				B617CA8816D497E500E531A2 /* Default@2x.png */,
@@ -923,6 +932,17 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		B67E74BB16F53DCF008B9CCB /* ResourcePack2 */ = {
+			isa = PBXGroup;
+			children = (
+				B67E74BC16F53DCF008B9CCB /* player2-hd.png */,
+				B67E74BD16F53DCF008B9CCB /* player2.png */,
+				B67E74BE16F53DCF008B9CCB /* projectile2-hd.png */,
+				B67E74BF16F53DCF008B9CCB /* projectile2.png */,
+			);
+			path = ResourcePack2;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -994,6 +1014,10 @@
 				B617CC3016D4990C00E531A2 /* projectile.png in Resources */,
 				B617CC3116D4990C00E531A2 /* background-music-aac.caf in Resources */,
 				B617CC3216D4990C00E531A2 /* pew-pew-lei.caf in Resources */,
+				B67E74C016F53DCF008B9CCB /* player2-hd.png in Resources */,
+				B67E74C116F53DCF008B9CCB /* player2.png in Resources */,
+				B67E74C216F53DCF008B9CCB /* projectile2-hd.png in Resources */,
+				B67E74C316F53DCF008B9CCB /* projectile2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1223,6 +1247,7 @@
 				B617CC1F16D497E800E531A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
