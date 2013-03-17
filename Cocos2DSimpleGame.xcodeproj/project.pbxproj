@@ -152,6 +152,7 @@
 		B67E74C116F53DCF008B9CCB /* player2.png in Resources */ = {isa = PBXBuildFile; fileRef = B67E74BD16F53DCF008B9CCB /* player2.png */; };
 		B67E74C216F53DCF008B9CCB /* projectile2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = B67E74BE16F53DCF008B9CCB /* projectile2-hd.png */; };
 		B67E74C316F53DCF008B9CCB /* projectile2.png in Resources */ = {isa = PBXBuildFile; fileRef = B67E74BF16F53DCF008B9CCB /* projectile2.png */; };
+		B67E74C516F543B9008B9CCB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B67E74C416F543B9008B9CCB /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -447,6 +448,7 @@
 		B67E74BD16F53DCF008B9CCB /* player2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player2.png; sourceTree = "<group>"; };
 		B67E74BE16F53DCF008B9CCB /* projectile2-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "projectile2-hd.png"; sourceTree = "<group>"; };
 		B67E74BF16F53DCF008B9CCB /* projectile2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = projectile2.png; sourceTree = "<group>"; };
+		B67E74C416F543B9008B9CCB /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -472,6 +474,7 @@
 		B617CA6616D497E500E531A2 = {
 			isa = PBXGroup;
 			children = (
+				B67E74C416F543B9008B9CCB /* .gitignore */,
 				B617CA8416D497E500E531A2 /* Cocos2DSimpleGame */,
 				B617CA7116D497E500E531A2 /* Frameworks */,
 				B617CA7016D497E500E531A2 /* Products */,
@@ -1018,6 +1021,7 @@
 				B67E74C116F53DCF008B9CCB /* player2.png in Resources */,
 				B67E74C216F53DCF008B9CCB /* projectile2-hd.png in Resources */,
 				B67E74C316F53DCF008B9CCB /* projectile2.png in Resources */,
+				B67E74C516F543B9008B9CCB /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
